@@ -46,7 +46,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
           child: ClipRRect(
             borderRadius: BorderRadius.circular(30),
             child: Container(
-              padding: EdgeInsets.all(8),
+              padding: const EdgeInsets.all(8),
               margin: const EdgeInsets.only(
                   top: 150, bottom: 300, left: 20, right: 20),
               color: Colors.white38,
