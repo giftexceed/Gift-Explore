@@ -15,10 +15,10 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   var images = {
-    "grandcanyon.jpeg": "Grand Canyon",
-    "paris.jpeg": "Paris Tower",
+    "grand-canyon.jpeg": "Grand Canyon",
+    "eiffel;-tower.jpeg": "Paris Tower",
     "vacation.jpeg": " Ibeza UAE",
-    "grandcanyon.jpeg": "Canyon",
+    "grand-canyon.jpeg": "Canyon",
   };
   @override
   Widget build(BuildContext context) {

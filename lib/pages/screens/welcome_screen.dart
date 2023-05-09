@@ -5,6 +5,7 @@ import 'package:gift_explore/widgets/widgets.dart';
 import '../../cubit/app_cubit.dart';
 import '../../widgets/button.dart';
 import '../../widgets/text.dart';
+import 'main_screen.dart';
 
 class WelcomeScreen extends StatefulWidget {
   const WelcomeScreen({super.key});
@@ -14,9 +15,9 @@ class WelcomeScreen extends StatefulWidget {
 }
 
 class _WelcomeScreenState extends State<WelcomeScreen> {
-  List images = ["grandcanyon.jpeg", "paris.jpeg", "vacation.jpeg"];
-  List bigText = ["Grand Canyon", "Paris Tower", "Dubai Beach "];
-  List country = ["Canada", "France", "UAE"];
+  List images = ["grand-canyon.jpeg", "eiffel-tower.jpeg", "vacation.jpeg"];
+  List bigText = ["Grand Canyon", "Eiffel Tower", "Miami Beach"];
+  List country = ["Arizona, USA", "Paris, France", "Florida"];
   List smallText = [
     "...visit the magnificent Grand Canyon! Witness one of the world greatest wonders!",
     "...visit Paris, see the beautiful man made structures",
@@ -33,12 +34,12 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
       itemCount: images.length,
       itemBuilder: (_, index) {
         return Container(
-          width: double.maxFinite,
-          height: double.maxFinite,
+          width: MediaQuery.of(context).size.width,
+          height: MediaQuery.of(context).size.height,
           decoration: BoxDecoration(
               image: DecorationImage(
             image: AssetImage(
-              "assets/images/" + images[index],
+              "assets/" + images[index],
             ),
             fit: BoxFit.cover,
           )),
@@ -47,7 +48,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
             child: Container(
               padding: EdgeInsets.all(8),
               margin: const EdgeInsets.only(
-                  top: 150, bottom: 390, left: 20, right: 20),
+                  top: 150, bottom: 300, left: 20, right: 20),
               color: Colors.white38,
               child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -70,11 +71,11 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                         GestureDetector(
                           onTap: () {
                             BlocProvider.of<AppCubits>(context).getData();
-                            // Navigator.push(
-                            //   context,
-                            //   MaterialPageRoute(
-                            //       builder: (context) => const MainScreen()),
-                            // );
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const MainScreen()),
+                            );
                           },
                           child: Container(
                             width: 200,
