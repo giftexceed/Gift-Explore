@@ -77,9 +77,9 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                                   builder: (context) => const MainScreen()),
                             );
                           },
-                          child: Container(
+                          child: const SizedBox(
                             width: 200,
-                            child: const AppButton(
+                            child: AppButton(
                               buttonWidth: 100,
                               text: "Proceed",
                             ),

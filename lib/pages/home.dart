@@ -75,7 +75,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                     indicatorSize: TabBarIndicatorSize.label,
                     indicator: CircleTabIndicator(
                         color: Theme.of(context).primaryColor, radius: 5),
-                    tabs: [
+                    tabs: const [
                       Tab(text: "Place"),
                       Tab(text: "Experience"),
                       Tab(text: "Imagination"),
@@ -111,8 +111,8 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                         ),
                       );
                     }),
-                Text("Exp"),
-                Text("Img"),
+                const Text("Exp"),
+                const Text("Img"),
               ]),
             ),
             _appWidget.sizedBox(height: 20),

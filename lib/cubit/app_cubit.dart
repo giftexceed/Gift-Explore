@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_typing_uninitialized_variables
+
 import 'package:bloc/bloc.dart';
 
 import '../model/data_model.dart';
